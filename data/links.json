@@ -281,20 +281,12 @@
                     "url": "https://www.youtube.com/watch?v=kIP8L-CSl2Y"
                 },
                 {
-                    "title": "How Razorpay Designed and Scaled their Notification System",
-                    "url": "https://www.youtube.com/watch?v=DQwlmTvs6xA"
-                },
-                {
                     "title": "How PayPal Beat the Thundering Herd Problem and Fixed Their Architecture",
                     "url": "https://www.youtube.com/watch?v=pFBCgFzS2W8"
                 },
                 {
                     "title": "Thundering Herd Problem and How not to do API retries",
                     "url": "https://www.youtube.com/watch?v=8sTuCPh3s0s"
-                },
-                {
-                    "title": "How Google designed their Highly Available Load Balancers using Anycast",
-                    "url": "https://www.youtube.com/watch?v=WjT253DBlXk"
                 },
                 {
                     "title": "What are L4 Load Balancers and how do they work?",
@@ -359,10 +351,6 @@
                 {
                     "title": "An in-depth introduction to Canary Deployments",
                     "url": "https://www.youtube.com/watch?v=nnseeKxovaM"
-                },
-                {
-                    "title": "Serverless Computing Explained - Introduction and Architecture",
-                    "url": "https://www.youtube.com/watch?v=oiZH5U_a0pg"
                 },
                 {
                     "title": "How to safely and gracefully handle timeouts in a microservices",
@@ -657,10 +645,6 @@
                 {
                     "title": "How DNS really works and how it scales infinitely?",
                     "url": "https://www.youtube.com/watch?v=g_gKI2HCElk"
-                },
-                {
-                    "title": "How Google designed their Highly Available Load Balancers using Anycast",
-                    "url": "https://www.youtube.com/watch?v=WjT253DBlXk"
                 }
             ]
         },
