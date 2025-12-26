@@ -16,8 +16,8 @@ export function VideoGrid({ videos }: VideoGridProps) {
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4">
-            {videos.map((video) => (
-                <VideoCard key={video.id || video.url} video={video} />
+            {videos.map((video, index) => (
+                <VideoCard key={`${video.id || video.url}-${index}`} video={video} />
             ))}
         </div>
     );

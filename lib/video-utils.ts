@@ -1,8 +1,6 @@
 import { Video, LinksData, DifficultyLevel, ContentType } from "@/types";
 import rawLinks from "@/data/links.json";
 
-// Force cast the raw JSON to our typed interface.
-// The JSON is an array of objects, but seemingly only one object based on the file content.
 const linksData = (rawLinks as unknown) as LinksData[];
 
 export const getYouTubeId = (url: string): string | undefined => {
@@ -17,8 +15,8 @@ export const getAllVideos = (): Video[] => {
     linksData.forEach((data) => {
         // Technical Levels
         if (data.levels) {
-            Object.values(data.levels).forEach((list) => {
-                list.forEach(v => {
+            Object.values(data.levels).forEach((list: Video[]) => {
+                list.forEach((v: Video) => {
                     videos.push({
                         ...v,
                         videoId: getYouTubeId(v.url),
@@ -30,7 +28,7 @@ export const getAllVideos = (): Video[] => {
 
         // Motivational
         if (data.motivation_and_soft_advice) {
-            data.motivation_and_soft_advice.forEach(v => {
+            data.motivation_and_soft_advice.forEach((v: Video) => {
                 videos.push({
                     ...v,
                     videoId: getYouTubeId(v.url),
@@ -54,18 +52,18 @@ export const getVideosByCategory = (type: ContentType, level?: DifficultyLevel):
     linksData.forEach(data => {
         if (type === 'technical' && data.levels) {
             if (level && data.levels[level]) {
-                videos.push(...data.levels[level].map(v => ({ ...v, videoId: getYouTubeId(v.url), id: getYouTubeId(v.url) })));
+                videos.push(...data.levels[level].map((v: Video) => ({ ...v, videoId: getYouTubeId(v.url), id: getYouTubeId(v.url) })));
             } else if (!level) {
                 // All technical levels
-                Object.values(data.levels).forEach(list => {
-                    videos.push(...list.map(v => ({ ...v, videoId: getYouTubeId(v.url), id: getYouTubeId(v.url) })));
+                Object.values(data.levels).forEach((list: Video[]) => {
+                    videos.push(...list.map((v: Video) => ({ ...v, videoId: getYouTubeId(v.url), id: getYouTubeId(v.url) })));
                 })
             }
         }
         else if (type === 'motivational') {
             // Ignores level for motivational now as it is a flat list
             if (data.motivation_and_soft_advice) {
-                videos.push(...data.motivation_and_soft_advice.map(v => ({ ...v, videoId: getYouTubeId(v.url), id: getYouTubeId(v.url) })));
+                videos.push(...data.motivation_and_soft_advice.map((v: Video) => ({ ...v, videoId: getYouTubeId(v.url), id: getYouTubeId(v.url) })));
             }
         }
     });
