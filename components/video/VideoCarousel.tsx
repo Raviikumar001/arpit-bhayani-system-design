@@ -25,7 +25,7 @@ export function VideoCarousel({ title, videos, viewAllLink }: VideoCarouselProps
     if (!videos.length) return null;
 
     return (
-        <section className="py-6 space-y-4">
+        <section className="py-6 space-y-4 px-2">
             <div className="flex items-center justify-between px-6 md:px-12">
                 <h2 className="text-xl md:text-2xl font-bold text-white group cursor-pointer flex items-center gap-2">
                     {title}
