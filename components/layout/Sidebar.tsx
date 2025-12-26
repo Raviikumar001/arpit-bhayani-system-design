@@ -6,6 +6,8 @@ import { GlassCard } from "@/components/ui/GlassCard";
 import { cn } from "@/lib/utils";
 import { BookOpen, Trophy, LayoutDashboard } from "lucide-react";
 
+// Paths remain mostly the same, but we ensure 'technical' maps to 'levels' in utils
+// and 'motivational/all' maps to the flat list.
 const navItems = [
     {
         title: "Dashboard",
@@ -22,7 +24,7 @@ const navItems = [
         icon: BookOpen
     },
     {
-        title: "Motivational",
+        title: "Motivation & Advice",
         items: [
             { name: "All Videos", href: "/motivational/all" },
         ],

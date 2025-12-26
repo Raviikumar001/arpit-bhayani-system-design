@@ -4,54 +4,27 @@ export type ContentType = "technical" | "motivational";
 export interface Video {
     title: string;
     url: string; // YouTube URL
-    focus: string; // Brief description or focus area
+    focus?: string; // Optional now based on new data
     id?: string; // Derived from URL or index
     videoId?: string; // Extracted YouTube ID
 }
 
-export interface CategoryData {
-    [key: string]: Video[]; // e.g. "beginner": [Video, Video]
-}
-
-export interface TechnicalCategories {
+export interface Levels {
     beginner: Video[];
     intermediate: Video[];
     advanced: Video[];
 }
 
-export interface MotivationalCategories {
-    beginner: Video[]; // Using 'beginner' as a catch-all for motivational if structure matches, or specific keys if different
-    intermediate?: Video[];
-}
-
 export interface LinksData {
-    channel: string;
-    categories: {
-        technical: TechnicalCategories;
-        motivational: MotivationalCategories;
-    };
+    levels: Levels;
+    motivation_and_soft_advice: Video[];
 }
 
-export interface CourseData {
-    channel: string;
-    categories: {
-        technical: {
-            beginner: Video[];
-            intermediate: Video[];
-            advanced: Video[];
-        };
-        motivational: {
-            beginner: Video[];
-            intermediate?: Video[];
-        };
-    };
-}
-
-
+// Keeping Note and Progress as they are independent of static data structure
 export interface Note {
     id: string;
     videoId: string;
-    content: string; // Rich text or HTML
+    content: string;
     createdAt: number;
     updatedAt: number;
 }

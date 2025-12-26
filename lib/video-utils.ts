@@ -1,8 +1,9 @@
-import { Video, CourseData, DifficultyLevel, ContentType } from "@/types";
+import { Video, LinksData, DifficultyLevel, ContentType } from "@/types";
 import rawLinks from "@/data/links.json";
 
-// Force cast the raw JSON to our typed interface
-const linksData = (rawLinks as unknown) as CourseData[];
+// Force cast the raw JSON to our typed interface.
+// The JSON is an array of objects, but seemingly only one object based on the file content.
+const linksData = (rawLinks as unknown) as LinksData[];
 
 export const getYouTubeId = (url: string): string | undefined => {
     const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
@@ -13,32 +14,28 @@ export const getYouTubeId = (url: string): string | undefined => {
 export const getAllVideos = (): Video[] => {
     const videos: Video[] = [];
 
-    // We assume the links.json structure is an array, usually with one main object for the channel
-    linksData.forEach((channelData) => {
-        // Technical
-        if (channelData.categories.technical) {
-            Object.entries(channelData.categories.technical).forEach(([level, videoList]) => {
-                videoList.forEach(v => {
+    linksData.forEach((data) => {
+        // Technical Levels
+        if (data.levels) {
+            Object.values(data.levels).forEach((list) => {
+                list.forEach(v => {
                     videos.push({
                         ...v,
                         videoId: getYouTubeId(v.url),
-                        id: getYouTubeId(v.url) // Use Youtube ID as the unique ID
-                    })
-                })
+                        id: getYouTubeId(v.url)
+                    });
+                });
             });
         }
+
         // Motivational
-        if (channelData.categories.motivational) {
-            Object.entries(channelData.categories.motivational).forEach(([level, videoList]) => {
-                if (videoList) {
-                    videoList.forEach(v => {
-                        videos.push({
-                            ...v,
-                            videoId: getYouTubeId(v.url),
-                            id: getYouTubeId(v.url)
-                        })
-                    })
-                }
+        if (data.motivation_and_soft_advice) {
+            data.motivation_and_soft_advice.forEach(v => {
+                videos.push({
+                    ...v,
+                    videoId: getYouTubeId(v.url),
+                    id: getYouTubeId(v.url)
+                });
             });
         }
     });
@@ -53,27 +50,22 @@ export const getVideoById = (id: string): Video | undefined => {
 
 export const getVideosByCategory = (type: ContentType, level?: DifficultyLevel): Video[] => {
     const videos: Video[] = [];
-    linksData.forEach(channelData => {
-        if (type === 'technical' && channelData.categories.technical) {
-            if (level && channelData.categories.technical[level]) {
-                videos.push(...channelData.categories.technical[level].map(v => ({ ...v, videoId: getYouTubeId(v.url), id: getYouTubeId(v.url) })));
+
+    linksData.forEach(data => {
+        if (type === 'technical' && data.levels) {
+            if (level && data.levels[level]) {
+                videos.push(...data.levels[level].map(v => ({ ...v, videoId: getYouTubeId(v.url), id: getYouTubeId(v.url) })));
             } else if (!level) {
-                // All technical
-                Object.values(channelData.categories.technical).forEach(list => {
+                // All technical levels
+                Object.values(data.levels).forEach(list => {
                     videos.push(...list.map(v => ({ ...v, videoId: getYouTubeId(v.url), id: getYouTubeId(v.url) })));
                 })
             }
         }
-        else if (type === 'motivational' && channelData.categories.motivational) {
-            // For motivational, the structure might be simpler or mapped differently
-            // For now assuming similar structure
-            if (level && (channelData.categories.motivational as any)[level]) {
-                videos.push(...(channelData.categories.motivational as any)[level].map((v: Video) => ({ ...v, videoId: getYouTubeId(v.url), id: getYouTubeId(v.url) })));
-            } else if (!level) {
-                // All motivational
-                Object.values(channelData.categories.motivational).forEach(list => {
-                    if (list) videos.push(...list.map(v => ({ ...v, videoId: getYouTubeId(v.url), id: getYouTubeId(v.url) })));
-                })
+        else if (type === 'motivational') {
+            // Ignores level for motivational now as it is a flat list
+            if (data.motivation_and_soft_advice) {
+                videos.push(...data.motivation_and_soft_advice.map(v => ({ ...v, videoId: getYouTubeId(v.url), id: getYouTubeId(v.url) })));
             }
         }
     });
