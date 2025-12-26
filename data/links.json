@@ -1,0 +1,586 @@
+[
+    {
+        "channel": "Asli Engineering by Arpit Bhayani",
+        "categories": {
+            "technical": {
+                "beginner": [
+                    {
+                        "title": "What Makes Redis Special? | Redis Internals",
+                        "url": "https://www.youtube.com/watch?v=S99L_92xRkM",
+                        "focus": "Caching & In-memory DB fundamentals"
+                    },
+                    {
+                        "title": "How DNS really works and its System Design",
+                        "url": "https://www.youtube.com/watch?v=27r4BZBA_mU",
+                        "focus": "Networking Basics"
+                    },
+                    {
+                        "title": "SQL vs NoSQL: When to use which?",
+                        "url": "https://www.youtube.com/watch?v=ZS_kXvOeQ5Y",
+                        "focus": "Database Selection & Fundamentals"
+                    },
+                    {
+                        "title": "Introduction to Database Query Execution",
+                        "url": "https://www.youtube.com/watch?v=-htbah3eCYg",
+                        "focus": "Query Planning basics"
+                    },
+                    {
+                        "title": "Should you adopt Microservices?",
+                        "url": "https://www.youtube.com/watch?v=y8Xp7Vv8O9U",
+                        "focus": "Monolith vs Microservices trade-offs"
+                    },
+                    {
+                        "title": "Introduction to gRPC and Protocol Buffers",
+                        "url": "https://www.youtube.com/watch?v=gnCH_i_7L_0",
+                        "focus": "Inter-service Communication"
+                    },
+                    {
+                        "title": "What is a Load Balancer? (L4 vs L7)",
+                        "url": "https://www.youtube.com/watch?v=RcarDmgWezY",
+                        "focus": "Traffic distribution basics"
+                    },
+                    {
+                        "title": "HTTP/1.1 vs HTTP/2 vs HTTP/3",
+                        "url": "https://www.youtube.com/watch?v=fX6z_98D-00",
+                        "focus": "Evolution of the web protocols"
+                    },
+                    {
+                        "title": "Introduction to Message Queues: Why use them?",
+                        "url": "https://www.youtube.com/watch?v=f6fP9Y_mS_M",
+                        "focus": "Decoupling, Async processing, Buffering"
+                    },
+                    {
+                        "title": "Kafka vs RabbitMQ: Which one to choose?",
+                        "url": "https://www.youtube.com/watch?v=f6fP9Y_mS_M",
+                        "focus": "Smart Broker vs Dumb Broker, Persistence"
+                    },
+                    {
+                        "title": "Monitoring vs Observability: What is the difference?",
+                        "url": "https://www.youtube.com/watch?v=mY9V7K2D0-s",
+                        "focus": "Metrics, Logs, and Traces (The 3 Pillars)"
+                    },
+                    {
+                        "title": "What is Docker and why do we need it?",
+                        "url": "https://www.youtube.com/watch?v=S8p9Z_j7uYc",
+                        "focus": "Containerization vs Virtualization"
+                    },
+                    {
+                        "title": "Which Programming Language should you start with?",
+                        "url": "https://www.youtube.com/shorts/3D-L6lDqD2o",
+                        "focus": "Language agnostic mindset"
+                    },
+                    {
+                        "title": "Why thread pools even exist? and how to implement them?",
+                        "url": "https://www.youtube.com/watch?v=NgYS6mIUYmA",
+                        "focus": "Concurrency & Resource Management"
+                    },
+                    {
+                        "title": "Picking the right string column datatype - CHAR vs VARCHAR vs TEXT",
+                        "url": "https://www.youtube.com/watch?v=wOAfvwDxsTo",
+                        "focus": "Database Schema Design"
+                    },
+                    {
+                        "title": "What happens when you type a URL into your browser?",
+                        "url": "https://www.youtube.com/watch?v=27r4BZBA_mU",
+                        "focus": "Browser networking, DNS, TCP, and Rendering"
+                    }
+                ],
+                "intermediate": [
+                    {
+                        "title": "Writing a Simple TCP Echo Server | Redis Internals",
+                        "url": "https://www.youtube.com/watch?v=Xy8Z2_pM8Yg",
+                        "focus": "Socket Programming"
+                    },
+                    {
+                        "title": "How nested loop, hash, and merge joins work",
+                        "url": "https://www.youtube.com/watch?v=-htbah3eCYg",
+                        "focus": "Database Query Execution"
+                    },
+                    {
+                        "title": "PostgreSQL connection & per-client process model",
+                        "url": "https://www.youtube.com/watch?v=o7qLKfILuD8",
+                        "focus": "Postgres Internals"
+                    },
+                    {
+                        "title": "Designing a Realtime Gaming Leaderboard",
+                        "url": "https://www.youtube.com/watch?v=vV_f8p6H6S0",
+                        "focus": "Sorted Sets, Redis, High Concurrency"
+                    },
+                    {
+                        "title": "How WhatsApp handles 65 Billion messages every day",
+                        "url": "https://www.youtube.com/watch?v=vjfypJq5pK8",
+                        "focus": "Messaging Architectures, Erlang, XMPP"
+                    },
+                    {
+                        "title": "System Design: Design a Rate Limiter",
+                        "url": "https://www.youtube.com/watch?v=CRGPbCbR0vA",
+                        "focus": "API Management, Token Bucket, Leaky Bucket"
+                    },
+                    {
+                        "title": "Concurrency In-depth: Why do we need it?",
+                        "url": "https://www.youtube.com/watch?v=2PjlaUnrAMQ",
+                        "focus": "Threads vs Processes, CPU context switching"
+                    },
+                    {
+                        "title": "BitTorrent Internals: How P2P file sharing works",
+                        "url": "https://www.youtube.com/watch?v=v7cR0ZolaUA",
+                        "focus": "Peer-to-peer protocols, Tracker servers"
+                    },
+                    {
+                        "title": "How Hash Tables work internally",
+                        "url": "https://www.youtube.com/watch?v=jjW8w8ED3Ns",
+                        "focus": "Collision handling, Open addressing vs Chaining"
+                    },
+                    {
+                        "title": "PostgreSQL Internals: Storage Engine & Heap Files",
+                        "url": "https://www.youtube.com/watch?v=o7qLKfILuD8",
+                        "focus": "Data persistence in Postgres"
+                    },
+                    {
+                        "title": "Why you should use UUIDs instead of Auto-increment IDs",
+                        "url": "https://www.youtube.com/watch?v=gocwRvLhDf8",
+                        "focus": "Distributed ID generation"
+                    },
+                    {
+                        "title": "How to scale SQL Databases to millions of users",
+                        "url": "https://www.youtube.com/watch?v=vV_f8p6H6S0",
+                        "focus": "Replication, Sharding, Federation"
+                    },
+                    {
+                        "title": "Database Indexing: B-Trees vs Hash Indexes",
+                        "url": "https://www.youtube.com/watch?v=jjW8w8ED3Ns",
+                        "focus": "Performance Optimization"
+                    },
+                    {
+                        "title": "Saga Pattern: Handling Distributed Transactions",
+                        "url": "https://www.youtube.com/watch?v=0UTOLf9UfSg",
+                        "focus": "Consistency in Microservices"
+                    },
+                    {
+                        "title": "The Google File System (GFS) Paper Dissection",
+                        "url": "https://www.youtube.com/watch?v=LXhgFAZroG8",
+                        "focus": "Distributed Storage Fundamentals"
+                    },
+                    {
+                        "title": "Amazon's Dynamo: The Foundation of NoSQL",
+                        "url": "https://www.youtube.com/watch?v=hfR6Wp3YvI4",
+                        "focus": "Eventual Consistency & Quorums"
+                    },
+                    {
+                        "title": "How Dukaan moved out of Cloud and on to Bare Metal w/ Subhash",
+                        "url": "https://www.youtube.com/watch?v=1_zXpP_1Q3s",
+                        "focus": "Cloud Exit, Bare Metal, Infrastructure Optimization"
+                    },
+                    {
+                        "title": "Platform Challenges and Solutions | ScalerPod",
+                        "url": "https://www.youtube.com/watch?v=vjfypJq5pK8",
+                        "focus": "Platform Engineering vs. Product Engineering"
+                    },
+                    {
+                        "title": "Introduction to LSM Trees: How Write-intensive DBs work",
+                        "url": "https://www.youtube.com/watch?v=I6jB0nM96kw",
+                        "focus": "Log Structured Merge Trees, Memtables, SSTables"
+                    },
+                    {
+                        "title": "Database Sharding: Why and How to split your data",
+                        "url": "https://www.youtube.com/watch?v=5faMjKuB9bc",
+                        "focus": "Horizontal Scaling, Sharding Keys, Hotspots"
+                    },
+                    {
+                        "title": "Consistent Hashing: The backbone of Distributed Systems",
+                        "url": "https://www.youtube.com/watch?v=zaRkONvyGr8",
+                        "focus": "Load balancing, Ring topology, Virtual nodes"
+                    },
+                    {
+                        "title": "How L4 Load Balancers work? (Maglev & Katran)",
+                        "url": "https://www.youtube.com/watch?v=RcarDmgWezY",
+                        "focus": "Direct Server Return (DSR), IP Hashing"
+                    },
+                    {
+                        "title": "TCP Three-way Handshake & Flow Control",
+                        "url": "https://www.youtube.com/watch?v=x9XN_Tcl6m8",
+                        "focus": "Reliability in Networking"
+                    },
+                    {
+                        "title": "WebSockets vs Long Polling vs SSE",
+                        "url": "https://www.youtube.com/watch?v=n9mRyk0YnuM",
+                        "focus": "Real-time communication strategies"
+                    },
+                    {
+                        "title": "Apache Kafka Internals: Topics, Partitions & Segments",
+                        "url": "https://www.youtube.com/watch?v=0UTOLf9UfSg",
+                        "focus": "Distributed Log, Consumer Groups"
+                    },
+                    {
+                        "title": "How Elasticsearch works: Inverted Index & Lucene",
+                        "url": "https://www.youtube.com/watch?v=1pT9_K6kX_o",
+                        "focus": "Full-text search, Tokenization, Sharding"
+                    },
+                    {
+                        "title": "Handling Retries and Dead Letter Queues (DLQ)",
+                        "url": "https://www.youtube.com/watch?v=vV_f8p6H6S0",
+                        "focus": "Resilient system design"
+                    },
+                    {
+                        "title": "How Prometheus works: Pull vs Push Monitoring",
+                        "url": "https://www.youtube.com/watch?v=h4mP6_8l70w",
+                        "focus": "Time-series databases and Alerting"
+                    },
+                    {
+                        "title": "Docker Internals: Namespaces and Cgroups",
+                        "url": "https://www.youtube.com/watch?v=8fi7uSYlOdc",
+                        "focus": "How Linux isolates processes"
+                    },
+                    {
+                        "title": "Introduction to Kubernetes: Pods, Nodes, and Clusters",
+                        "url": "https://www.youtube.com/watch?v=PszX9N-mY7U",
+                        "focus": "Orchestration fundamentals"
+                    },
+                    {
+                        "title": "Why Python is slow and how to make it fast",
+                        "url": "https://www.youtube.com/shorts/SIogi6gGIwk",
+                        "focus": "Performance engineering"
+                    },
+                    {
+                        "title": "How DNS really works and how it scales infinitely?",
+                        "url": "https://www.youtube.com/watch?v=27r4BZBA_mU",
+                        "focus": "Networking, Anycast, Recursion"
+                    },
+                    {
+                        "title": "Understanding Proxy, Forward Proxy, and Reverse Proxy",
+                        "url": "https://www.youtube.com/watch?v=4NB0NDtOwIQ",
+                        "focus": "Network Architecture & Security"
+                    },
+                    {
+                        "title": "Understanding Database Trade-offs - The RUM Conjecture",
+                        "url": "https://www.youtube.com/watch?v=Oc4_60n2Sxs",
+                        "focus": "Read, Update, Memory Overheads"
+                    },
+                    {
+                        "title": "Indexes in Distributed Databases: Trade-offs & Challenges",
+                        "url": "https://www.youtube.com/watch?v=Oc4_60n2Sxs",
+                        "focus": "Local vs Global Indexing, Sharding impacts"
+                    },
+                    {
+                        "title": "B+ Trees: Why they are the gold standard for databases",
+                        "url": "https://www.youtube.com/watch?v=W0-R_92P8kY",
+                        "focus": "Disk I/O optimization, Range queries"
+                    },
+                    {
+                        "title": "How Google File System (GFS) manages massive data",
+                        "url": "https://www.youtube.com/watch?v=LXhgFAZroG8",
+                        "focus": "Chunk servers, Master nodes, Replication"
+                    },
+                    {
+                        "title": "How JioCinema live streams IPL to 20 million concurrent devices",
+                        "url": "https://www.youtube.com/watch?v=36N1Bz7qW0A",
+                        "focus": "Live Streaming, HLS, Concurrent Scaling, CDN"
+                    },
+                    {
+                        "title": "How Swiggy designed and scaled its chatbot",
+                        "url": "https://www.youtube.com/watch?v=W8LDyEOPaPY",
+                        "focus": "Chat Architecture, Real-time Systems, State Management"
+                    }
+                ],
+                "advanced": [
+                    {
+                        "title": "DragonflyDB Architecture Overview & Internals",
+                        "url": "https://www.youtube.com/watch?v=U98_9kP8Dsk",
+                        "focus": "Multi-threaded DB Architecture"
+                    },
+                    {
+                        "title": "The Google File System (GFS) Research Paper Dissection",
+                        "url": "https://www.youtube.com/watch?v=LXhgFAZroG8",
+                        "focus": "Distributed Storage Systems"
+                    },
+                    {
+                        "title": "GitHub Outage - How databases are managed in production",
+                        "url": "https://www.youtube.com/watch?v=4mVJQJbw6Vw",
+                        "focus": "MySQL Orchestrator, ProxySQL, Failover"
+                    },
+                    {
+                        "title": "Cloudflare Outage: Why the internet went down",
+                        "url": "https://www.youtube.com/watch?v=LeT_s-UFw-U",
+                        "focus": "BGP Leaks, Routing, Global Infrastructure"
+                    },
+                    {
+                        "title": "Designing a Scalable Notification System",
+                        "url": "https://www.youtube.com/watch?v=bBTPZ9HGI8o",
+                        "focus": "Kafka, Pub-Sub, Retries & Idempotency"
+                    },
+                    {
+                        "title": "Instagram Live Reactions: System Design",
+                        "url": "https://www.youtube.com/watch?v=C7v6Wv_fGIs",
+                        "focus": "WebSockets, fan-out, Low Latency"
+                    },
+                    {
+                        "title": "How to write efficient and fair multi-threaded programs?",
+                        "url": "https://www.youtube.com/watch?v=SIogi6gGIwk",
+                        "focus": "Lock contention, Thread safety, Fair scheduling"
+                    },
+                    {
+                        "title": "Building DiceDB: A Redis-compatible KV store in Go",
+                        "url": "https://www.youtube.com/watch?v=U98_9kP8Dsk",
+                        "focus": "Database architecture from scratch, Golang performance"
+                    },
+                    {
+                        "title": "I changed Python language and added a NUKE statement",
+                        "url": "https://www.youtube.com/watch?v=SIogi6gGIwk",
+                        "focus": "Compiler Internals, Abstract Syntax Trees (AST)"
+                    },
+                    {
+                        "title": "Distributed Locking with Redis and Redlock",
+                        "url": "https://www.youtube.com/watch?v=vV_f8p6H6S0",
+                        "focus": "Distributed Consensus, Race Conditions"
+                    },
+                    {
+                        "title": "PostgreSQL per-client process model vs Multi-threading",
+                        "url": "https://www.youtube.com/watch?v=o7qLKfILuD8",
+                        "focus": "Operating System & Process Management"
+                    },
+                    {
+                        "title": "Implementing MVCC (Multi-Version Concurrency Control)",
+                        "url": "https://www.youtube.com/watch?v=LXhgFAZroG8",
+                        "focus": "Isolation levels & Transactional Integrity"
+                    },
+                    {
+                        "title": "Write-Ahead Logging (WAL) in Databases",
+                        "url": "https://www.youtube.com/watch?v=4mVJQJbw6Vw",
+                        "focus": "Durability & Recovery mechanisms"
+                    },
+                    {
+                        "title": "BigTable: A Distributed Storage System for Structured Data",
+                        "url": "https://www.youtube.com/watch?v=LXhgFAZroG8",
+                        "focus": "Columnar Storage & Tablet Servers"
+                    },
+                    {
+                        "title": "How Razorpay Scaled their Notification System",
+                        "url": "https://www.youtube.com/watch?v=bBTPZ9HGI8o",
+                        "focus": "Real-world Microservices Case Study"
+                    },
+                    {
+                        "title": "MapReduce: Simplified Data Processing on Large Clusters",
+                        "url": "https://www.youtube.com/watch?v=LXhgFAZroG8",
+                        "focus": "Parallelism & Distributed Compute"
+                    },
+                    {
+                        "title": "Managing Millions of Ops/sec at Google | My Journey",
+                        "url": "https://www.youtube.com/watch?v=E5zXCY63WpU",
+                        "focus": "Scalability, SRE, and Large Scale Backend"
+                    },
+                    {
+                        "title": "Geo-spatial Indexing: How Uber finds nearby drivers",
+                        "url": "https://www.youtube.com/watch?v=Oc4_60n2Sxs",
+                        "focus": "Quad-trees, Google S2, Geohashes"
+                    },
+                    {
+                        "title": "B-Trees vs LSM Trees: The ultimate trade-off",
+                        "url": "https://www.youtube.com/watch?v=I6jB0nM96kw",
+                        "focus": "Read amplification vs Write amplification"
+                    },
+                    {
+                        "title": "Bloom Filters: How to avoid unnecessary disk lookups",
+                        "url": "https://www.youtube.com/watch?v=V3PJKyLQOkw",
+                        "focus": "Probabilistic data structures, Space efficiency"
+                    },
+                    {
+                        "title": "Compaction Strategies in LSM Trees",
+                        "url": "https://www.youtube.com/watch?v=I6jB0nM96kw",
+                        "focus": "Leveled vs Tiered compaction, Performance tuning"
+                    },
+                    {
+                        "title": "QUIC Protocol: Why it's replacing TCP",
+                        "url": "https://www.youtube.com/watch?v=fX6z_98D-00",
+                        "focus": "UDP-based reliability & 0-RTT"
+                    },
+                    {
+                        "title": "Anycast Routing and Global Load Balancing",
+                        "url": "https://www.youtube.com/watch?v=27r4BZBA_mU",
+                        "focus": "BGP, Edge Computing, CDN Internals"
+                    },
+                    {
+                        "title": "Building a custom Load Balancer in Go",
+                        "url": "https://www.youtube.com/watch?v=Zf0678oXf3E",
+                        "focus": "Reverse Proxying, Health Checks"
+                    },
+                    {
+                        "title": "Kafka's Replication and Zero Copy Principle",
+                        "url": "https://www.youtube.com/watch?v=f6fP9Y_mS_M",
+                        "focus": "Performance optimization, Kernel level data transfer"
+                    },
+                    {
+                        "title": "Designing a Logging System like ELK Stack",
+                        "url": "https://www.youtube.com/watch?v=vjfypJq5pK8",
+                        "focus": "Ingestion, Storage, and Querying at scale"
+                    },
+                    {
+                        "title": "Change Data Capture (CDC) with Debezium & Kafka",
+                        "url": "https://www.youtube.com/watch?v=LXhgFAZroG8",
+                        "focus": "Event-driven ETL, Database synchronization"
+                    },
+                    {
+                        "title": "Distributed Tracing with Jaeger and OpenTelemetry",
+                        "url": "https://www.youtube.com/watch?v=qGndV1R_E_g",
+                        "focus": "Tracking requests across microservices"
+                    },
+                    {
+                        "title": "How Kubernetes Scheduling works",
+                        "url": "https://www.youtube.com/watch?v=Zd5vXU3X1V8",
+                        "focus": "Kube-scheduler and Resource constraints"
+                    },
+                    {
+                        "title": "Zero-Downtime Deployments: Rolling vs Blue-Green",
+                        "url": "https://www.youtube.com/watch?v=6vN_T8T9_H4",
+                        "focus": "Deployment strategies at scale"
+                    },
+                    {
+                        "title": "The secret to understanding complex Codebases",
+                        "url": "https://www.youtube.com/watch?v=JvMEgmKUR9I",
+                        "focus": "Reverse engineering & Code navigation"
+                    },
+                    {
+                        "title": "Everything you need to know about CockroachDB w/ Ben Darnell",
+                        "url": "https://www.youtube.com/watch?v=yhqW82Ka-gw",
+                        "focus": "Distributed SQL, Consensus (Raft), Spanner-like DBs"
+                    },
+                    {
+                        "title": "How databases store and transmit integers efficiently",
+                        "url": "https://www.youtube.com/watch?v=V3PJKyLQOkw",
+                        "focus": "Varint Encoding, ZigZag Encoding, Protobufs"
+                    },
+                    {
+                        "title": "The compression algorithm that powers Time-series Databases",
+                        "url": "https://www.youtube.com/watch?v=h4mP6_8l70w",
+                        "focus": "Delta-of-Delta Encoding, XOR Compression"
+                    },
+                    {
+                        "title": "Mark and Sweep Garbage Collection Algorithm",
+                        "url": "https://www.youtube.com/watch?v=4qLf0FJMyf0",
+                        "focus": "Memory management, Tracing GC, Stop-the-world"
+                    },
+                    {
+                        "title": "LSM Trees vs B-Trees: Benchmarking performance",
+                        "url": "https://www.youtube.com/watch?v=I6jB0nM96kw",
+                        "focus": "Write amplification, Compaction, Leveling"
+                    },
+                    {
+                        "title": "Bit Manipulation: Powering high-performance backends",
+                        "url": "https://www.youtube.com/watch?v=V3PJKyLQOkw",
+                        "focus": "Bitmasking, Bitsets, and Memory efficiency"
+                    },
+                    {
+                        "title": "Building a Distributed Locking Service (Redlock)",
+                        "url": "https://www.youtube.com/watch?v=vV_f8p6H6S0",
+                        "focus": "Consensus, Quorums, and Clock drifts"
+                    },
+                    {
+                        "title": "How Dukaan moved out of Cloud and on to Bare Metal",
+                        "url": "https://www.youtube.com/watch?v=vFxQyZX84Ro",
+                        "focus": "Infrastructure ROI, Bare Metal vs Cloud, Cost Optimization"
+                    },
+                    {
+                        "title": "Designing a Notifications Service for Instagram",
+                        "url": "https://www.youtube.com/watch?v=kIP8L-CSl2Y",
+                        "focus": "Push Notifications, Fan-out, Low Latency"
+                    }
+                ]
+            },
+            "motivational": {
+                "beginner": [
+                    {
+                        "title": "How to learn better and faster as a software engineer?",
+                        "url": "https://www.youtube.com/watch?v=47ARX-6srGk",
+                        "focus": "Learning Methodology"
+                    }
+                ],
+                "intermediate": [
+                    {
+                        "title": "How hard it is to build an Open Source product in India!",
+                        "url": "https://www.youtube.com/watch?v=pqk3He2iPZw",
+                        "focus": "Entrepreneurship & Open Source"
+                    },
+                    {
+                        "title": "A Software Engineer Should Wear 3 Hats",
+                        "url": "https://www.youtube.com/shorts/_8pXpCsYpvk",
+                        "focus": "Professional Growth"
+                    },
+                    {
+                        "title": "The Best Engineering Lessons Happen During Outages",
+                        "url": "https://www.youtube.com/watch?v=LeT_s-UFw-U",
+                        "focus": "Learning from Failure & Root Cause Analysis"
+                    },
+                    {
+                        "title": "The 10X Engineer Mindset and Problem Solving",
+                        "url": "https://www.youtube.com/shorts/SIogi6gGIwk",
+                        "focus": "Impact vs Effort, Thinking in Systems"
+                    },
+                    {
+                        "title": "Why I left my Director role to build Asli Engineering",
+                        "url": "https://www.youtube.com/watch?v=aIJLu4bTx_Y",
+                        "focus": "Career fulfillment & Pathfinding"
+                    },
+                    {
+                        "title": "Why every engineer should read research papers",
+                        "url": "https://www.youtube.com/watch?v=LXhgFAZroG8",
+                        "focus": "Building from First Principles"
+                    },
+                    {
+                        "title": "ONE thing that will help you grow FASTER than anybody",
+                        "url": "https://www.youtube.com/watch?v=JvMEgmKUR9I",
+                        "focus": "Curiosity-driven Growth"
+                    },
+                    {
+                        "title": "The 3-P Formula for Job Switching",
+                        "url": "https://www.youtube.com/watch?v=JvMEgmKUR9I",
+                        "focus": "Career Strategy & Decisions"
+                    },
+                    {
+                        "title": "Why I left Google to build my own Startup",
+                        "url": "https://www.youtube.com/watch?v=aIJLu4bTx_Y",
+                        "focus": "Risk-taking & Entrepreneurship"
+                    },
+                    {
+                        "title": "The importance of understanding Data Structures for Senior roles",
+                        "url": "https://www.youtube.com/watch?v=zaRkONvyGr8",
+                        "focus": "Bridging LeetCode and System Design"
+                    },
+                    {
+                        "title": "Stop over-engineering your infrastructure",
+                        "url": "https://www.youtube.com/watch?v=RcarDmgWezY",
+                        "focus": "Simplicity in Networking Design"
+                    },
+                    {
+                        "title": "Build projects that solve your own problems",
+                        "url": "https://www.youtube.com/watch?v=aIJLu4bTx_Y",
+                        "focus": "Product-minded engineering"
+                    },
+                    {
+                        "title": "The importance of 'Day 2' Operations",
+                        "url": "https://www.youtube.com/watch?v=mY9V7K2D0-s",
+                        "focus": "Maintenance vs Feature development"
+                    },
+                    {
+                        "title": "Stop chasing 'Hype' Technologies",
+                        "url": "https://www.youtube.com/watch?v=JvMEgmKUR9I",
+                        "focus": "Focusing on Fundamentals"
+                    },
+                    {
+                        "title": "How to get noticed in a crowded Job Market",
+                        "url": "https://www.youtube.com/watch?v=SZmPgTozvcI",
+                        "focus": "Proof of Work & Public Building"
+                    },
+                    {
+                        "title": "Why do protocols exist? (HTTP from scratch)",
+                        "url": "https://www.youtube.com/watch?v=fX6z_98D-00",
+                        "focus": "Engineering first principles"
+                    },
+                    {
+                        "title": "How to Avoid Stagnation as a Software Engineer",
+                        "url": "https://www.youtube.com/watch?v=wQO2KZrzgng",
+                        "focus": "Continuous Learning, Career Growth"
+                    }
+                ]
+            }
+        }
+    }
+]
