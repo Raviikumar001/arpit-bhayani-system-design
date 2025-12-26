@@ -53,10 +53,10 @@ export function HeroSection({ video }: HeroSectionProps) {
                         <Play className="w-5 h-5 fill-black" />
                         Watch Now
                     </Link>
-                    <button className="flex items-center gap-2 px-8 py-3 bg-white/20 text-white rounded-lg font-semibold hover:bg-white/30 backdrop-blur-md transition-colors">
+                    {/* <button className="flex items-center gap-2 px-8 py-3 bg-white/20 text-white rounded-lg font-semibold hover:bg-white/30 backdrop-blur-md transition-colors">
                         <Info className="w-5 h-5" />
                         More Info
-                    </button>
+                    </button> */}
                 </div>
             </div>
         </section>
