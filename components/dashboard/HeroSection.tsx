@@ -25,7 +25,7 @@ export function HeroSection({ video }: HeroSectionProps) {
             </div>
 
             {/* Content */}
-            <div className="relative z-10 p-6 md:p-12 max-w-4xl w-full">
+            <div className="relative z-10 p-6 md:p-12 max-w-4xl w-full ml-2">
                 <div className="flex items-center gap-2 mb-4">
                     <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs font-bold rounded border border-yellow-500/30 uppercase tracking-wider">
                         Featured
