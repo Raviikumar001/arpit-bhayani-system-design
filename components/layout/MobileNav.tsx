@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, BookOpen, Trophy, User } from "lucide-react";
+import { Home, BookOpen, Trophy, User, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export function MobileNav() {
@@ -13,6 +13,11 @@ export function MobileNav() {
             label: "Home",
             href: "/",
             icon: Home
+        },
+        {
+            label: "Search",
+            href: "/search",
+            icon: Search
         },
         {
             label: "Learn",

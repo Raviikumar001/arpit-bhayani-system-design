@@ -48,6 +48,24 @@ export default function CategoryPage({ params }: { params: Promise<{ type: strin
                     <p className="text-zinc-400">
                         {description}
                     </p>
+
+                    {/* Level Switcher (Tabs) for Technical Content */}
+                    {type === 'technical' && (
+                        <div className="flex items-center gap-2 mt-6 overflow-x-auto pb-2 scrollbar-hide">
+                            {['beginner', 'intermediate', 'advanced'].map((lvl) => (
+                                <a
+                                    key={lvl}
+                                    href={`/technical/${lvl}`}
+                                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap ${level === lvl
+                                            ? 'bg-white text-black'
+                                            : 'bg-white/5 text-zinc-400 hover:text-white hover:bg-white/10'
+                                        }`}
+                                >
+                                    {lvl.charAt(0).toUpperCase() + lvl.slice(1)}
+                                </a>
+                            ))}
+                        </div>
+                    )}
                 </div>
 
                 <div className="relative w-full md:w-72 group">
