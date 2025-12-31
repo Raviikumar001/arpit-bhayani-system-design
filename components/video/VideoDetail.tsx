@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { useStore } from "@/store/useStore";
 import { Video } from "@/types";
 import { GlassCard } from "@/components/ui/GlassCard";
-import { CheckCircle, Clock, BookOpen, PanelRightClose, PanelRightOpen, X } from "lucide-react";
+import { CheckCircle, Check, Clock, BookOpen, PanelRightClose, PanelRightOpen, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface VideoDetailProps {
@@ -110,13 +110,17 @@ export function VideoDetail({ video }: VideoDetailProps) {
                             <button
                                 onClick={handleToggleComplete}
                                 className={cn(
-                                    "flex-1 md:flex-none flex items-center justify-center gap-2 px-6 py-3 rounded-full font-bold transition-all duration-300 transform active:scale-95",
+                                    "flex-1 md:flex-none flex items-center justify-center gap-2 px-6 py-3 rounded-full font-bold transition-all duration-300 transform active:scale-95 shadow-lg hover:shadow-green-500/20",
                                     isVideoCompleted
-                                        ? "bg-green-500 text-black hover:bg-green-400"
+                                        ? "bg-green-500 text-black hover:bg-green-400 border border-green-400/50"
                                         : "bg-white text-black hover:bg-zinc-200"
                                 )}
                             >
-                                <CheckCircle className={cn("w-5 h-5", isVideoCompleted && "fill-black")} />
+                                {isVideoCompleted ? (
+                                    <Check className="w-5 h-5 stroke-[3]" />
+                                ) : (
+                                    <CheckCircle className="w-5 h-5" />
+                                )}
                                 {isVideoCompleted ? "Completed" : "Mark as Complete"}
                             </button>
 
