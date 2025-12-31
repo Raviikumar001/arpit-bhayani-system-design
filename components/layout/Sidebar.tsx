@@ -5,9 +5,14 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { cn } from "@/lib/utils";
-import { BookOpen, Trophy, LayoutDashboard, Info, ChevronLeft, ChevronRight } from "lucide-react";
+import { BookOpen, Trophy, LayoutDashboard, Info, ChevronLeft, ChevronRight, Search } from "lucide-react";
 
 const navItems = [
+    {
+        title: "Search",
+        href: "/search",
+        icon: Search,
+    },
     {
         title: "Dashboard",
         href: "/",
@@ -50,7 +55,7 @@ export function Sidebar() {
             <div className="flex items-center justify-between px-2 mb-4">
                 {!isCollapsed && (
                     <Link href="/">
-                        <h1 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent whitespace-nowrap">
+                        <h1 className="text-xl font-bold bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent whitespace-nowrap">
                             Arpit Bhayani
                         </h1>
                         <p className="text-xs text-zinc-500 uppercase tracking-widest mt-1 whitespace-nowrap">Learning Hub</p>
@@ -140,7 +145,7 @@ export function Sidebar() {
 
             {!isCollapsed && (
                 <div className="mt-auto">
-                    <GlassCard className="p-4 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 border-white/5 text-xs text-zinc-400">
+                    <GlassCard className="p-4 bg-linear-to-r from-indigo-500/20 to-purple-500/20 border-white/5 text-xs text-zinc-400">
                         <p>Built for learning.</p>
                         <p className="mt-1 opacity-50">Offline capable.</p>
                     </GlassCard>
