@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { cn } from "@/lib/utils";
-import { BookOpen, Trophy, LayoutDashboard, Info, ChevronLeft, ChevronRight, Search } from "lucide-react";
+import { BookOpen, Trophy, LayoutDashboard, Info, ChevronLeft, ChevronRight, Search, PieChart } from "lucide-react";
 
 const navItems = [
     {
@@ -33,6 +33,11 @@ const navItems = [
             { name: "All Videos", href: "/motivational/all" },
         ],
         icon: Trophy
+    },
+    {
+        title: "Progress",
+        href: "/progress",
+        icon: PieChart
     },
     {
         title: "About",
