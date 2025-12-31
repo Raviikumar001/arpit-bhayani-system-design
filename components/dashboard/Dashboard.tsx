@@ -51,7 +51,7 @@ export function Dashboard() {
             {/* Hero Section */}
             {featuredVideo && <HeroSection video={featuredVideo} />}
 
-            <div className="px-0 md:px-8 space-y-8 -mt-12 relative z-20">
+            <div className="px-0 md:px-2 space-y-8 -mt-12 relative z-20">
 
 
                 {lastWatchedVideo && (
