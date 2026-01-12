@@ -15,7 +15,7 @@ export default function CategoryPage({ params }: { params: Promise<{ type: strin
     const [filterQuery, setFilterQuery] = useState("");
 
     const videoType = type as ContentType;
-    // If logical level is "all" or strictly for motivational, we might ignore valid casting for display text
+
     const videoLevel = level === 'all' ? undefined : (level as DifficultyLevel);
 
     const initialVideos = getVideosByCategory(videoType, videoLevel);

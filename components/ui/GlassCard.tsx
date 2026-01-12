@@ -22,7 +22,7 @@ export function GlassCard({
             )}
             {...props}
         >
-            {/* Noise texture overlay for texture (optional, can be added globally) */}
+          
             <div className="absolute inset-0 z-[-1] opacity-5 pointer-events-none" />
             {children}
         </div>

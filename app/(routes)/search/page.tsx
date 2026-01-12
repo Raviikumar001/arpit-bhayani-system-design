@@ -18,7 +18,7 @@ function SearchContent() {
     const [isSearching, setIsSearching] = useState(false);
     const [commonTags] = useState(() => getCommonTags(12));
 
-    // Debounce search effect
+
     useEffect(() => {
         const timer = setTimeout(() => {
             if (query.trim()) {
@@ -42,7 +42,7 @@ function SearchContent() {
                         Search Library
                     </h1>
 
-                    {/* Apple Glass Pill Search Bar */}
+                 
                     <div className="max-w-xl mx-auto">
                         <div className="flex items-center h-12 px-4 rounded-full bg-zinc-800/60 border border-zinc-600/40 backdrop-blur-2xl transition-all duration-200 focus-within:border-zinc-500/60 focus-within:bg-zinc-700/50">
                             <SearchIcon className="w-4 h-4 text-zinc-400 shrink-0" />

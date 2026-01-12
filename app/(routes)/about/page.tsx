@@ -2,13 +2,12 @@
 
 import { GlassCard } from "@/components/ui/GlassCard";
 import { ExternalLink, Github, Linkedin, Youtube } from "lucide-react";
-import Link from "next/link";
 
 export default function AboutPage() {
     return (
         <div className="p-8 max-w-4xl mx-auto space-y-12">
 
-            {/* Arpit Bhayani Section */}
+            {/* About Section */}
             <section className="space-y-6">
                 <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
                     <div className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-blue-500/20 shadow-2xl shrink-0">
@@ -47,7 +46,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Disclaimer */}
+      
             <GlassCard className="border-yellow-500/20 bg-yellow-500/5 px-3 py-2">
                 <h3 className="text-yellow-500 font-bold mb-2 flex items-center gap-2">
                     <span>⚠️</span> Disclaimer
@@ -58,11 +57,11 @@ export default function AboutPage() {
                 </p>
             </GlassCard>
 
-            {/* Developer Credits */}
+ 
             <section className="text-center pt-8 border-t border-white/5">
                 <p className="text-zinc-500 text-sm mb-4">Developed with ❤️ by</p>
                 <GlassCard className="inline-flex items-center gap-4 px-6 py-3 hover:bg-white/5 transition-colors cursor-default">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center font-bold text-white">
+                    <div className="w-10 h-10 rounded-full bg-linear-to-br from-indigo-500 to-purple-600 flex items-center justify-center font-bold text-white">
                         R
                     </div>
                     <div className="text-left">

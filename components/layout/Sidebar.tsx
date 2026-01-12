@@ -111,14 +111,7 @@ export function Sidebar() {
                                                 {section.title}
                                             </div>
                                         </div>
-                                        {/* Collapsed sub-items simplified or hidden? Ideally accessible. 
-                                             For simplicity in this collapsing mode, maybe we just show the main category icon and if clicked it goes to first item? 
-                                             Or we list all sub-items as dots? 
-                                             Let's keep it simple: Show specific icons for sub-items if they had unique icons, but they don't.
-                                             Let's just show links for sub items as small dots or initials?
-                                             Actually, for valid UX in collapsed mode with submenus, we usually use popovers. 
-                                             Given the constraints, I'll simplify: just show the category icon acting as a link to the first item.
-                                         */}
+                                     
                                         {section.items.map((item) => (
                                             <Link key={item.href} href={item.href} className="w-full flex justify-center">
                                                 <div className={cn(

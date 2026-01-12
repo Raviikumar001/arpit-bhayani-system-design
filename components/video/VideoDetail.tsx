@@ -14,10 +14,10 @@ interface VideoDetailProps {
 export function VideoDetail({ video }: VideoDetailProps) {
     const { progress, notes, markCompleted, saveNote, loadData, updateProgress } = useStore();
     const [noteContent, setNoteContent] = useState("");
-    const [showNotes, setShowNotes] = useState(false); // Default closed for immersion
+    const [showNotes, setShowNotes] = useState(false); 
     const isVideoCompleted = video.id ? progress[video.id]?.completed : false;
 
-    // Use a ref to track if we've loaded data to prevent overwriting note state on initial render
+  
     const dataLoaded = useRef(false);
 
     useEffect(() => {
@@ -29,7 +29,7 @@ export function VideoDetail({ video }: VideoDetailProps) {
         });
     }, [loadData, video.id]);
 
-    // Sync note content from store only on first load logic (simulated above) or when switching videos
+   
     useEffect(() => {
         if (video.id && notes[video.id]) {
             setNoteContent(notes[video.id].content);
@@ -54,7 +54,7 @@ export function VideoDetail({ video }: VideoDetailProps) {
         }
     };
 
-    // Auto-mark watched when playing (simplified simulation: just update last watched on mount)
+
     useEffect(() => {
         if (video.id) {
             updateProgress(video.id, Date.now());
@@ -65,17 +65,13 @@ export function VideoDetail({ video }: VideoDetailProps) {
         <div className="relative min-h-[calc(100vh-100px)] flex flex-col lg:flex-row gap-6">
             {/* Video Player Section - Expands if notes are hidden */}
             <div className={cn(
-                "flex-1 transition-all duration-300 ease-in-out" // Removed margin logic, flex will handle it
+                "flex-1 transition-all duration-300 ease-in-out" 
             )}>
-                {/* 
-                    layout strategy: 
-                    If notes open: Video takes available space (flex-1).
-                    Notes take fixed width (w-96) as a sibling flex item.
-                 */}
+                
                 <div className="space-y-6">
                     <div className={cn(
                         "w-full rounded-2xl overflow-hidden bg-black shadow-2xl border border-white/10 relative group",
-                        showNotes ? "aspect-video" : "aspect-video lg:h-[70vh] lg:aspect-auto" // Taller immersive mode if no notes
+                        showNotes ? "aspect-video" : "aspect-video lg:h-[70vh] lg:aspect-auto"
                     )}>
                         {video.videoId ? (
                             <iframe
@@ -98,7 +94,7 @@ export function VideoDetail({ video }: VideoDetailProps) {
                                         {video.focus}
                                     </span>
                                 )}
-                                {/* Author Credit */}
+                           
                                 <span className="flex items-center gap-2">
                                     <span className="w-1 h-1 bg-zinc-600 rounded-full" />
                                     Arpit Bhayani
@@ -117,7 +113,7 @@ export function VideoDetail({ video }: VideoDetailProps) {
                                 )}
                             >
                                 {isVideoCompleted ? (
-                                    <Check className="w-5 h-5 stroke-[3]" />
+                                    <Check className="w-5 h-5 stroke-3" />
                                 ) : (
                                     <CheckCircle className="w-5 h-5" />
                                 )}
@@ -142,28 +138,17 @@ export function VideoDetail({ video }: VideoDetailProps) {
                 </div>
             </div>
 
-            {/* Notes Section - Slide over on mobile, Side column on Desktop */}
+         
             <div className={cn(
                 "fixed inset-y-0 right-0 z-40 w-full md:w-96 bg-zinc-900/95 backdrop-blur-xl border-l border-white/10 shadow-2xl transition-transform duration-300 ease-in-out",
-                // Mobile behavior: slide in/out fixed
+                
                 !showNotes ? "translate-x-full lg:hidden" : "translate-x-0",
-                // Desktop behavior: relative (in follow) if shown
+          
                 "lg:relative lg:transform-none lg:h-auto lg:shadow-none lg:bg-transparent lg:border-none lg:backdrop-blur-none",
                 showNotes ? "lg:block" : "lg:hidden"
             )}>
                 <div className="flex flex-col h-full pt-20 lg:pt-0 bg-zinc-900 lg:bg-black/40 lg:border lg:border-white/10 lg:rounded-2xl lg:overflow-hidden">
-                    {/* On mobile, we need a close button if it's full screen or fixed. 
-                        My layout says "lg:relative" but above I used "lg:hidden" logic. 
-                        Let's stick to the styling class logic:
-                        - Mobile: Fixed slide-over.
-                        - Desktop (lg): conditional rendering in flow or fixed side?
-                        Let's do Fixed Side for consistency and 'overlay' feel or strictly split?
-                        The user complaned about "blocking". 
-                        If I make it flex row, it shrinks the video.
-                        If I make it overlay, it blocks the video.
-                        BEST UX: Flex row (Shrink video) BUT video is already aspect ratio. 
-                        So shrinking width shrinks height. That's fine.
-                     */}
+                  
 
                     <div className="flex items-center justify-between p-4 border-b border-white/10">
                         <h2 className="font-semibold text-xl flex items-center gap-2 text-white">

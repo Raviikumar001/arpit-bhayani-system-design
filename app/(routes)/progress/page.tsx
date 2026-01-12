@@ -115,7 +115,7 @@ export default function ProgressPage() {
                 <p className="text-zinc-400">Track your journey through system design mastery</p>
             </div>
 
-            {/* Total Progress - Big Hero Card */}
+          
             <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-900/50 via-purple-900/40 to-black border border-white/10 p-8 md:p-12 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-8">
                 <div className="space-y-4 max-w-lg relative z-10">
                     <h2 className="text-2xl md:text-3xl font-bold text-white">
@@ -129,7 +129,7 @@ export default function ProgressPage() {
                     </p>
                 </div>
 
-                {/* Circular Progress */}
+          
                 <div className="relative z-10 flex-shrink-0">
                     <div className="relative w-40 h-40 md:w-48 md:h-48 flex items-center justify-center">
                         <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
@@ -160,11 +160,10 @@ export default function ProgressPage() {
                     </div>
                 </div>
 
-                {/* Background Glow */}
                 <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-500/20 blur-[100px] rounded-full -translate-y-1/2 translate-x-1/2" />
             </div>
 
-            {/* Level Grid */}
+         
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <ProgressCard
                     title="Beginner"
