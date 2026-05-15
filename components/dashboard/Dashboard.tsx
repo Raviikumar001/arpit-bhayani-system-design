@@ -61,7 +61,6 @@ export function Dashboard() {
                     />
                 )}
 
-{/* 
                 <VideoCarousel
                     title="Recommended for You"
                     videos={recommendedVideos}
@@ -72,7 +71,7 @@ export function Dashboard() {
                     title="Motivation & Advice"
                     videos={motivationalVideos}
                     viewAllLink="/motivational/all"
-                /> */}
+                /> 
 
 
                 <VideoCarousel
