@@ -221,6 +221,14 @@
                 {
                     "title": "End-to-end Message Encryption",
                     "url": "https://www.youtube.com/watch?v=m_7xSIhxZL8"
+                },
+                {
+                    "title": "What are Reactive Databases and why DiceDB exists?",
+                    "url": "https://www.youtube.com/watch?v=V6hi86woFl8"
+                },
+                {
+                    "title": "Announcing DiceDB 1.0",
+                    "url": "https://www.youtube.com/watch?v=1hGwZ-IeN6M"
                 }
             ],
             "intermediate": [
@@ -483,6 +491,34 @@
                 {
                     "title": "How Giphy uses CDN to serve 10 billion GIFs every day",
                     "url": "https://www.youtube.com/watch?v=-bo7oVejgRM"
+                },
+                {
+                    "title": "Low Level Design and Data Schema Modeling of API Clients Like Requestly",
+                    "url": "https://www.youtube.com/watch?v=GeXJ0GxzVZM"
+                },
+                {
+                    "title": "Stripe's Smarter Approach to Structured Logging - Canonical Log Lines",
+                    "url": "https://www.youtube.com/watch?v=9XJtEzmzG3g"
+                },
+                {
+                    "title": "When DB consumes more memory than it should, malloc might be the problem",
+                    "url": "https://www.youtube.com/watch?v=9TkOg-J2Dnc"
+                },
+                {
+                    "title": "How MySQL's Midpoint Insertion Strategy Prevents Cache Pollution",
+                    "url": "https://www.youtube.com/watch?v=DMfr9jMLnz0"
+                },
+                {
+                    "title": "Synonymic Query Expansion to handle Prashant in Search - Lexical vs Phonetic vs Semantic Search",
+                    "url": "https://www.youtube.com/watch?v=gZIVHSFgkvk"
+                },
+                {
+                    "title": "How Atlassian reduced latency by 70% by using Sidecar pattern and when should you use it",
+                    "url": "https://www.youtube.com/watch?v=IsM4bnJ-8Gw"
+                },
+                {
+                    "title": "How BitBucket reduced master database load by 50% and also solved Read your Write consistency",
+                    "url": "https://www.youtube.com/watch?v=sbDVs71wIVk"
                 }
             ],
             "advanced": [
@@ -645,6 +681,66 @@
                 {
                     "title": "How DNS really works and how it scales infinitely?",
                     "url": "https://www.youtube.com/watch?v=g_gKI2HCElk"
+                },
+                {
+                    "title": "Object, Encodings, and Implementing INCR | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=Dl9h6sQAFfk"
+                },
+                {
+                    "title": "Implementing AOF Persistence | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=5SnkVoatBpA"
+                },
+                {
+                    "title": "Implementing Command Pipelining | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=2q7RuEb9z-M"
+                },
+                {
+                    "title": "Key Eviction Strategies in Redis and Implementing Simple First Eviction | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=EkaTFT9ox-I"
+                },
+                {
+                    "title": "Implementing DEL, EXPIRE, and Cleanup in Redis | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=yGdk0hmvkgo"
+                },
+                {
+                    "title": "Implementing GET, SET, and TTL Commands in Redis | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=1rnEpo56LFk"
+                },
+                {
+                    "title": "Implementing Event Loops | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=SMmLVHgE4pM"
+                },
+                {
+                    "title": "Event Loops Internals And How Redis Handles Multiple Connects on a Single Thread | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=U2IFZ_hw91o"
+                },
+                {
+                    "title": "Implementing Redis' PING Command | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=70UJ1QTQj5Y"
+                },
+                {
+                    "title": "Implementing Redis' Wire Protocol - RESP | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=wnHZHGc8tW8"
+                },
+                {
+                    "title": "Wire Protocols, Why Are They Needed, and Redis' Wire Protocol - RESP | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=PtJl3jtmqgE"
+                },
+                {
+                    "title": "How Stripe Migrates Millions of Records and Schema with Zero Downtime and No Data Inconsistency",
+                    "url": "https://www.youtube.com/watch?v=FtJPvgMsn-Q"
+                },
+                {
+                    "title": "How Stripe Scales MongoDB to 5 million Queries Per Second",
+                    "url": "https://www.youtube.com/watch?v=i6WAAWclARU"
+                },
+                {
+                    "title": "How OpenAI Handles 800 Million ChatGPT Users on a Single PostgreSQL Primary",
+                    "url": "https://www.youtube.com/watch?v=ubpUjovBMAM"
+                },
+                {
+                    "title": "How GitHub Sharded Their Databases Without Downtime and Broke Their Monolith",
+                    "url": "https://www.youtube.com/watch?v=Tq1fif3rcnQ"
                 }
             ]
         },
