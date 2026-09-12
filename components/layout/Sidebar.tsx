@@ -6,7 +6,7 @@ import { useState } from "react";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { cn } from "@/lib/utils";
 import { getAllSeries } from "@/lib/video-utils";
-import { BookOpen, Trophy, LayoutDashboard, Info, ChevronLeft, ChevronRight, Search, PieChart, ListVideo } from "lucide-react";
+import { BookOpen, Trophy, LayoutDashboard, Info, ChevronLeft, ChevronRight, ChevronDown, ChevronUp, Search, PieChart, ListVideo } from "lucide-react";
 
 const navItems = [
     {
@@ -50,6 +50,7 @@ const navItems = [
 export function Sidebar() {
     const pathname = usePathname();
     const [isCollapsed, setIsCollapsed] = useState(false);
+    const [seriesExpanded, setSeriesExpanded] = useState(false);
 
     const seriesSection = {
         title: "Series",
@@ -63,6 +64,23 @@ export function Sidebar() {
     };
     // Insert Series right after Technical (index 2)
     const sections = [navItems[0], navItems[1], navItems[2], seriesSection, ...navItems.slice(3)];
+
+    // Series list is long — show a few, expand on demand. Auto-expand on series
+    // pages so the active link is never hidden.
+    const VISIBLE_SERIES_COUNT = 4;
+    const isSeriesRoute = pathname === "/series" || pathname.startsWith("/series/");
+    const showAllSeries = seriesExpanded || isSeriesRoute;
+    const visibleSeriesItems = showAllSeries
+        ? seriesSection.items
+        : seriesSection.items.slice(0, VISIBLE_SERIES_COUNT);
+    const hiddenSeriesCount = seriesSection.items.length - visibleSeriesItems.length;
+    // Collapsed rail stays compact but never hides the active dot.
+    const collapsedSeriesItems = seriesSection.items.slice(0, VISIBLE_SERIES_COUNT);
+    const activeSeriesItem = seriesSection.items.find((item) => pathname === item.href);
+    if (activeSeriesItem && !collapsedSeriesItems.includes(activeSeriesItem)) {
+        collapsedSeriesItems.push(activeSeriesItem);
+    }
+    const collapsedHiddenCount = seriesSection.items.length - collapsedSeriesItems.length;
 
     return (
         <aside
@@ -89,7 +107,79 @@ export function Sidebar() {
             </div>
 
             <div className="space-y-6 flex-1 overflow-y-auto scrollbar-hide">
-                {sections.map((section) => (
+                {sections.map((section) => {
+                    if (section.title === "Series") {
+                        return (
+                            <div key={section.title}>
+                                {!isCollapsed ? (
+                                    <>
+                                        <Link
+                                            href="/series"
+                                            className="flex items-center gap-2 px-3 mb-2 text-zinc-400 hover:text-zinc-100 text-sm font-medium uppercase tracking-wider whitespace-nowrap transition-colors"
+                                        >
+                                            <ListVideo className="w-4 h-4" />
+                                            Series
+                                        </Link>
+                                        <div className="space-y-1">
+                                            {visibleSeriesItems.map((item) => {
+                                                const isActive = pathname === item.href;
+                                                return (
+                                                    <Link key={item.href} href={item.href}>
+                                                        <div className={cn(
+                                                            "px-3 py-2 rounded-lg text-sm transition-all duration-200 border border-transparent whitespace-nowrap",
+                                                            isActive
+                                                                ? "bg-white/10 text-white border-white/10 shadow-sm backdrop-blur-sm"
+                                                                : "text-zinc-400 hover:text-zinc-100 hover:bg-white/5"
+                                                        )}>
+                                                            {item.name}
+                                                        </div>
+                                                    </Link>
+                                                );
+                                            })}
+                                            {!isSeriesRoute && hiddenSeriesCount > 0 && (
+                                                <button
+                                                    onClick={() => setSeriesExpanded((v) => !v)}
+                                                    aria-expanded={seriesExpanded}
+                                                    className="w-full flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium text-zinc-500 hover:text-zinc-200 hover:bg-white/5 transition-all duration-200"
+                                                >
+                                                    {seriesExpanded ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
+                                                    {seriesExpanded ? "Show less" : `Show ${hiddenSeriesCount} more`}
+                                                </button>
+                                            )}
+                                        </div>
+                                    </>
+                                ) : (
+                                    <div className="flex flex-col items-center gap-2">
+                                        <Link href="/series" className="group relative flex justify-center p-2 mb-2 text-zinc-400 hover:text-white">
+                                            <ListVideo className="w-5 h-5" />
+                                            <div className="absolute left-full ml-4 px-2 py-1 bg-zinc-900 border border-white/10 rounded text-xs text-white opacity-0 group-hover:opacity-100 pointer-events-none whitespace-nowrap z-50">
+                                                Series
+                                            </div>
+                                        </Link>
+
+                                        {collapsedSeriesItems.map((item) => (
+                                            <Link key={item.href} href={item.href} className="w-full flex justify-center">
+                                                <div className={cn(
+                                                    "w-2 h-2 rounded-full transition-colors",
+                                                    pathname === item.href ? "bg-blue-500" : "bg-zinc-700 hover:bg-zinc-500"
+                                                )} title={item.name} />
+                                            </Link>
+                                        ))}
+                                        {collapsedHiddenCount > 0 && (
+                                            <Link
+                                                href="/series"
+                                                className="text-[10px] font-bold text-zinc-500 hover:text-zinc-200 transition-colors"
+                                                title={`Show ${collapsedHiddenCount} more series`}
+                                            >
+                                                +{collapsedHiddenCount}
+                                            </Link>
+                                        )}
+                                    </div>
+                                )}
+                            </div>
+                        );
+                    }
+                    return (
                     <div key={section.title}>
                         {section.items ? (
                             <>
@@ -152,7 +242,8 @@ export function Sidebar() {
                             </Link>
                         )}
                     </div>
-                ))}
+                    );
+                })}
             </div>
 
             {!isCollapsed && (
