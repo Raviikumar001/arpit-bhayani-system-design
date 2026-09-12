@@ -6,7 +6,9 @@ import { CheckCircle, PlayCircle } from "lucide-react";
 import { Video } from "@/types";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { useStore } from "@/store/useStore";
+import { getSeriesForVideo } from "@/lib/video-utils";
 import { cn } from "@/lib/utils";
+import { ListVideo } from "lucide-react";
 
 interface VideoCardProps {
     video: Video;
@@ -15,6 +17,7 @@ interface VideoCardProps {
 export function VideoCard({ video }: VideoCardProps) {
     const { progress } = useStore();
     const isCompleted = video.id ? progress[video.id]?.completed : false;
+    const membership = video.id ? getSeriesForVideo(video.id) : undefined;
 
     return (
         <Link href={`/video/${video.id}`} className="block group">
@@ -37,6 +40,18 @@ export function VideoCard({ video }: VideoCardProps) {
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-sm">
                         <PlayCircle className="w-12 h-12 text-white/90" />
                     </div>
+
+                    {membership && (
+                        <div
+                            className="absolute bottom-2 left-2 flex items-center gap-1 px-2 py-1 bg-black/80 backdrop-blur-md text-white text-[10px] font-bold rounded border border-white/10 max-w-[75%]"
+                            title={`${membership.series.title} — Part ${membership.part} of ${membership.total}`}
+                        >
+                            <ListVideo className="w-3 h-3 shrink-0 text-blue-400" />
+                            <span className="truncate">
+                                {membership.series.title} • {membership.part}/{membership.total}
+                            </span>
+                        </div>
+                    )}
 
                     {isCompleted && (
                         <div className="absolute top-2 right-2 bg-green-500/80 backdrop-blur-md rounded-full p-1 shadow-lg">

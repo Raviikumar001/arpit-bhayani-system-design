@@ -1,10 +1,12 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useMemo } from "react";
+import Link from "next/link";
 import { useStore } from "@/store/useStore";
 import { Video } from "@/types";
 import { GlassCard } from "@/components/ui/GlassCard";
-import { CheckCircle, Check, Clock, BookOpen, PanelRightClose, PanelRightOpen, X } from "lucide-react";
+import { getSeriesForVideo, getSeriesVideos } from "@/lib/video-utils";
+import { CheckCircle, Check, Clock, BookOpen, PanelRightClose, PanelRightOpen, X, ChevronLeft, ChevronRight, ListVideo } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface VideoDetailProps {
@@ -16,6 +18,17 @@ export function VideoDetail({ video }: VideoDetailProps) {
     const [noteContent, setNoteContent] = useState("");
     const [showNotes, setShowNotes] = useState(false); 
     const isVideoCompleted = video.id ? progress[video.id]?.completed : false;
+
+    const membership = useMemo(
+        () => (video.id ? getSeriesForVideo(video.id) : undefined),
+        [video.id]
+    );
+    const seriesProgress = useMemo(() => {
+        if (!membership) return null;
+        const episodes = getSeriesVideos(membership.series.slug);
+        const done = episodes.filter((v) => v.id && progress[v.id]?.completed).length;
+        return { done, total: episodes.length };
+    }, [membership, progress]);
 
   
     const dataLoaded = useRef(false);
@@ -100,6 +113,60 @@ export function VideoDetail({ video }: VideoDetailProps) {
                                     Arpit Bhayani
                                 </span>
                             </div>
+
+                            {membership && seriesProgress && (
+                                <div className="mt-4 p-4 rounded-xl bg-white/[0.03] border border-white/10">
+                                    <div className="flex items-center justify-between gap-3 mb-2">
+                                        <Link
+                                            href={`/series/${membership.series.slug}`}
+                                            className="flex items-center gap-2 text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors min-w-0"
+                                        >
+                                            <ListVideo className="w-4 h-4 shrink-0" />
+                                            <span className="truncate">{membership.series.title}</span>
+                                            <span className="text-zinc-500 font-medium whitespace-nowrap">
+                                                Part {membership.part} of {membership.total}
+                                            </span>
+                                        </Link>
+                                        <span className="text-xs text-zinc-500 font-medium whitespace-nowrap">
+                                            {seriesProgress.done}/{seriesProgress.total} watched
+                                        </span>
+                                    </div>
+                                    <div className="w-full h-1.5 bg-zinc-800 rounded-full overflow-hidden mb-3">
+                                        <div
+                                            className="h-full bg-blue-500 rounded-full transition-all duration-500"
+                                            style={{ width: `${seriesProgress.total > 0 ? Math.round((seriesProgress.done / seriesProgress.total) * 100) : 0}%` }}
+                                        />
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        {membership.prev ? (
+                                            <Link
+                                                href={`/video/${membership.prev.id}`}
+                                                className="flex-1 flex items-center gap-1 px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-sm text-zinc-300 hover:text-white transition-colors min-w-0"
+                                            >
+                                                <ChevronLeft className="w-4 h-4 shrink-0" />
+                                                <span className="truncate">Prev: {membership.prev.title}</span>
+                                            </Link>
+                                        ) : (
+                                            <span className="flex-1 px-3 py-2 text-sm text-zinc-600 text-center">
+                                                First episode
+                                            </span>
+                                        )}
+                                        {membership.next ? (
+                                            <Link
+                                                href={`/video/${membership.next.id}`}
+                                                className="flex-1 flex items-center justify-end gap-1 px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-sm text-zinc-300 hover:text-white transition-colors min-w-0"
+                                            >
+                                                <span className="truncate">Next: {membership.next.title}</span>
+                                                <ChevronRight className="w-4 h-4 shrink-0" />
+                                            </Link>
+                                        ) : (
+                                            <span className="flex-1 px-3 py-2 text-sm text-zinc-600 text-center">
+                                                Last episode 🎉
+                                            </span>
+                                        )}
+                                    </div>
+                                </div>
+                            )}
                         </div>
 
                         <div className="flex items-center gap-3 w-full md:w-auto">

@@ -1,0 +1,143 @@
+[
+    {
+        "slug": "redis-internals",
+        "title": "Redis Internals",
+        "tagline": "Build your own Redis from scratch — RESP, event loops, persistence, eviction and more.",
+        "videoIds": [
+            "NXbOVLpage0",
+            "h30k7YixrMo",
+            "zlxdX9f4l50",
+            "PtJl3jtmqgE",
+            "wnHZHGc8tW8",
+            "70UJ1QTQj5Y",
+            "U2IFZ_hw91o",
+            "SMmLVHgE4pM",
+            "1rnEpo56LFk",
+            "yGdk0hmvkgo",
+            "EkaTFT9ox-I",
+            "2q7RuEb9z-M",
+            "5SnkVoatBpA",
+            "Dl9h6sQAFfk",
+            "jmN3VRsUmRs",
+            "0kOCyjFKKL4",
+            "FvGGkzcKKFA",
+            "xNfoeZuK3Mc",
+            "RCNMYljRmY4",
+            "l-Bf0Ssf2GE",
+            "USZAZeuP8Iw",
+            "2EknAibFgu8",
+            "OPxs_D47yCI",
+            "q6Q2ou0hCws",
+            "rAi1h7dltCk",
+            "Bx7ykrizjCY"
+        ]
+    },
+    {
+        "slug": "honest-python",
+        "title": "The Honest Python",
+        "tagline": "Python internals from first principles — all the way to hacking CPython itself.",
+        "videoIds": [
+            "E-3J8X5DulY",
+            "k5isLG6vqss",
+            "rWb7VYz1q1U",
+            "QpGK69LzfpY",
+            "zz2Lu5ht_jA",
+            "6mhXGEXRXG0",
+            "u4tfIy--4GM",
+            "IGLnxdmJu2c",
+            "Q8luYnxiFFE",
+            "UmF57P7TerI",
+            "vuZO4qzjCdQ",
+            "mLNNKl0oGiQ"
+        ]
+    },
+    {
+        "slug": "hash-tables",
+        "title": "Hash Tables",
+        "tagline": "Hash tables end to end — structure, performance, collision resolution and resizing.",
+        "videoIds": [
+            "jjW8w8ED3Ns",
+            "9rb8oILi4lU",
+            "6_yFb7icd_c",
+            "5QKAXG25hig",
+            "F-8pWiJv8ik",
+            "wV4K6fo0T58",
+            "oD2yaTtu69w",
+            "zt1E0akArqQ",
+            "mmPwVBm-8n0",
+            "CcoMvgIdrD8",
+            "VCMO2X6EoK0"
+        ]
+    },
+    {
+        "slug": "bittorrent",
+        "title": "BitTorrent",
+        "tagline": "How BitTorrent works — architecture, file format, core algorithms and attacking the network.",
+        "videoIds": [
+            "v7cR0ZolaUA",
+            "shVvFVFiZcs",
+            "tHT94dSMwKw",
+            "iognYJRzCE8",
+            "QSeex0YxReY",
+            "nYtAzzH-twM"
+        ]
+    },
+    {
+        "slug": "garbage-collection",
+        "title": "Garbage Collection",
+        "tagline": "Collectors from first principles — Mark & Sweep, Tricolor abstraction and switching GC off.",
+        "videoIds": [
+            "jcMxuLZCcqU",
+            "IojMqbegejk",
+            "4qLf0FJMyf0",
+            "LkympMbgmCo",
+            "lhrRwjVPXPo",
+            "Zqw4KjhWxEc"
+        ]
+    },
+    {
+        "slug": "postgres-internals",
+        "title": "PostgreSQL Internals",
+        "tagline": "How Postgres runs your query — connections, parsing, planning and joins.",
+        "videoIds": [
+            "o7qLKfILuD8",
+            "m8PtOY3aWL0",
+            "pj7Fxr8cUJI",
+            "-htbah3eCYg"
+        ]
+    },
+    {
+        "slug": "junodb",
+        "title": "JunoDB",
+        "tagline": "Inside PayPal's JunoDB — architecture, horizontal scale, six-9s availability and security.",
+        "videoIds": [
+            "Jddce8sPFsc",
+            "2Bwzh-881PU",
+            "6ljQaZAm8Rk",
+            "2V_oP5xCbO4",
+            "-YxWRxOFgRY"
+        ]
+    },
+    {
+        "slug": "dragonflydb",
+        "title": "DragonflyDB",
+        "tagline": "DragonflyDB internals — 6.43M ops/sec through better data structures.",
+        "videoIds": [
+            "XbV1LoVsbME",
+            "MOLG4-IovOQ",
+            "z-yC2o4GZvg",
+            "GsuxpMTnDRM"
+        ]
+    },
+    {
+        "slug": "rockset-internals",
+        "title": "Rockset Internals",
+        "tagline": "Inside a real-time analytics database — indexing, elastic query compute and isolation.",
+        "videoIds": [
+            "I4eEEAgoCig",
+            "xGaUJTHuehQ",
+            "HWeTVy5i9vE",
+            "DF8BbwtEa7k"
+        ]
+    }
+]

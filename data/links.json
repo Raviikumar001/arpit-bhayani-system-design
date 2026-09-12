@@ -55,10 +55,6 @@
                     "url": "https://www.youtube.com/watch?v=--YbYCfMnxc"
                 },
                 {
-                    "title": "Database Sharding and Partitioning",
-                    "url": "https://www.youtube.com/watch?v=wXvljefXyEo"
-                },
-                {
                     "title": "What are Embedded Databases and why do they exist?",
                     "url": "https://www.youtube.com/watch?v=xELqRiovEcI"
                 },
@@ -221,6 +217,98 @@
                 {
                     "title": "End-to-end Message Encryption",
                     "url": "https://www.youtube.com/watch?v=m_7xSIhxZL8"
+                },
+                {
+                    "title": "Consistent Hashing and Its Implementation From the First Principles",
+                    "url": "https://www.youtube.com/watch?v=Jvimt56KPnk"
+                },
+                {
+                    "title": "Deckrun - Presentation Utility for Markdown and Self-contained HTML",
+                    "url": "https://www.youtube.com/watch?v=HcBZMQNQsxk"
+                },
+                {
+                    "title": "What are Reactive Databases and why DiceDB exists?",
+                    "url": "https://www.youtube.com/watch?v=V6hi86woFl8"
+                },
+                {
+                    "title": "Announcing DiceDB 1.0",
+                    "url": "https://www.youtube.com/watch?v=1hGwZ-IeN6M"
+                },
+                {
+                    "title": "How databases store and transmit integers efficiently using varint encoding",
+                    "url": "https://www.youtube.com/watch?v=9b2e_iRVJ0k"
+                },
+                {
+                    "title": "How Pass by Value and Pass By Pointer work internally? Peeking into the assembly code to find out",
+                    "url": "https://www.youtube.com/watch?v=-dVuyTMByBA"
+                },
+                {
+                    "title": "Bloom Filters - From the First Principles",
+                    "url": "https://www.youtube.com/watch?v=mItewjU-YG8"
+                },
+                {
+                    "title": "I changed python language and added a new NUKE statement",
+                    "url": "https://www.youtube.com/watch?v=mLNNKl0oGiQ"
+                },
+                {
+                    "title": "I changed the Python print statement to understand how it works internally",
+                    "url": "https://www.youtube.com/watch?v=vuZO4qzjCdQ"
+                },
+                {
+                    "title": "Peeking into assembly code to understand why count++ is not atomic",
+                    "url": "https://www.youtube.com/watch?v=kBHd7kn_1EU"
+                },
+                {
+                    "title": "How to write efficient and fair multi-threaded programs?",
+                    "url": "https://www.youtube.com/watch?v=2PjlaUnrAMQ"
+                },
+                {
+                    "title": "Understanding Phantom Reads Problem with hands on examples",
+                    "url": "https://www.youtube.com/watch?v=n_t0IO0mq5Q"
+                },
+                {
+                    "title": "Exploiting and stealing from the BitTorrent network",
+                    "url": "https://www.youtube.com/watch?v=nYtAzzH-twM"
+                },
+                {
+                    "title": "The Piece Selection algorithm that makes BitTorrent fault tolerant",
+                    "url": "https://www.youtube.com/watch?v=QSeex0YxReY"
+                },
+                {
+                    "title": "The Choke Algorithm that powers BitTorrent",
+                    "url": "https://www.youtube.com/watch?v=iognYJRzCE8"
+                },
+                {
+                    "title": "Designing Workflows in Microservices - Orchestration vs Choreography",
+                    "url": "https://www.youtube.com/watch?v=HiwOx-W1TIA"
+                },
+                {
+                    "title": "How \"is\" operator is implemented in python?",
+                    "url": "https://www.youtube.com/watch?v=Q8luYnxiFFE"
+                },
+                {
+                    "title": "How id() function is implemented in python?",
+                    "url": "https://www.youtube.com/watch?v=IGLnxdmJu2c"
+                },
+                {
+                    "title": "How python compares a float and an int objects?",
+                    "url": "https://www.youtube.com/watch?v=u4tfIy--4GM"
+                },
+                {
+                    "title": "How python optimizes integers?",
+                    "url": "https://www.youtube.com/watch?v=6mhXGEXRXG0"
+                },
+                {
+                    "title": "How python implements chained comparison operators?",
+                    "url": "https://www.youtube.com/watch?v=zz2Lu5ht_jA"
+                },
+                {
+                    "title": "How python optimizes strings using String Interning?",
+                    "url": "https://www.youtube.com/watch?v=QpGK69LzfpY"
+                },
+                {
+                    "title": "Changing python grammar to support standalone walrus assignments",
+                    "url": "https://www.youtube.com/watch?v=rWb7VYz1q1U"
                 }
             ],
             "intermediate": [
@@ -483,6 +571,210 @@
                 {
                     "title": "How Giphy uses CDN to serve 10 billion GIFs every day",
                     "url": "https://www.youtube.com/watch?v=-bo7oVejgRM"
+                },
+                {
+                    "title": "How Kafka Actually Achieves Exactly-Once Semantics",
+                    "url": "https://www.youtube.com/watch?v=iRhDCIzhm4A"
+                },
+                {
+                    "title": "How Google Manages 2 Billion Lines of Code in a Single Repository",
+                    "url": "https://www.youtube.com/watch?v=l6oPw2prTXE"
+                },
+                {
+                    "title": "Bitcask Explained - A Log-Structured fast KV Store Used By Uber",
+                    "url": "https://www.youtube.com/watch?v=0WI_tJRUMqM"
+                },
+                {
+                    "title": "Hyperloglog and Cardinality Estimation",
+                    "url": "https://www.youtube.com/watch?v=tOsb-tFoPCg"
+                },
+                {
+                    "title": "Low Level Design and Data Schema Modeling of API Clients Like Requestly",
+                    "url": "https://www.youtube.com/watch?v=GeXJ0GxzVZM"
+                },
+                {
+                    "title": "How Stripe Migrates Millions of Records and Schema with Zero Downtime and No Data Inconsistency",
+                    "url": "https://www.youtube.com/watch?v=FtJPvgMsn-Q"
+                },
+                {
+                    "title": "Stripe's Smarter Approach to Structured Logging - Canonical Log Lines",
+                    "url": "https://www.youtube.com/watch?v=9XJtEzmzG3g"
+                },
+                {
+                    "title": "How Stripe Scales MongoDB to 5 million Queries Per Second",
+                    "url": "https://www.youtube.com/watch?v=i6WAAWclARU"
+                },
+                {
+                    "title": "How OpenAI Handles 800 Million ChatGPT Users on a Single PostgreSQL Primary",
+                    "url": "https://www.youtube.com/watch?v=ubpUjovBMAM"
+                },
+                {
+                    "title": "How GitHub Sharded Their Databases Without Downtime and Broke Their Monolith",
+                    "url": "https://www.youtube.com/watch?v=Tq1fif3rcnQ"
+                },
+                {
+                    "title": "Synonymic Query Expansion to handle Prashant in Search - Lexical vs Phonetic vs Semantic Search",
+                    "url": "https://www.youtube.com/watch?v=gZIVHSFgkvk"
+                },
+                {
+                    "title": "How Atlassian reduced latency by 70% by using Sidecar pattern and when should you use it",
+                    "url": "https://www.youtube.com/watch?v=IsM4bnJ-8Gw"
+                },
+                {
+                    "title": "How BitBucket reduced master database load by 50% and also solved Read your Write consistency",
+                    "url": "https://www.youtube.com/watch?v=sbDVs71wIVk"
+                },
+                {
+                    "title": "Saved 55% cost, 75% CPU, at 33x speed - Why and how Jira moved from JSON to Protobuf",
+                    "url": "https://www.youtube.com/watch?v=roNgG4QVjTU"
+                },
+                {
+                    "title": "Why and how Trello moved away from RabbitMQ to Kafka for their WebSocket-based real-time updates",
+                    "url": "https://www.youtube.com/watch?v=LJzS6dUV-GE"
+                },
+                {
+                    "title": "Cache Invalidation using SNS + SQS at Atlassian and then they moved away!",
+                    "url": "https://www.youtube.com/watch?v=fJNyTNP71MM"
+                },
+                {
+                    "title": "A bug in the GitHub's Rate Limiter",
+                    "url": "https://www.youtube.com/watch?v=LAdUhenKDJ8"
+                },
+                {
+                    "title": "Internals, architecture, and interesting trade-offs of Blacksmith that runs GitHub Actions 2x faster",
+                    "url": "https://www.youtube.com/watch?v=q_2nkMBuLQQ"
+                },
+                {
+                    "title": "How LinkedIn improved their latency by 60%",
+                    "url": "https://www.youtube.com/watch?v=DgNncAnhkIY"
+                },
+                {
+                    "title": "Designing a Realtime Gaming Leaderboard - Horizontally Scalable and Highly Available",
+                    "url": "https://www.youtube.com/watch?v=UerkzwZ_zSY"
+                },
+                {
+                    "title": "How Reddit designed their metadata store to serve 100k req/sec at p99 of 17ms",
+                    "url": "https://www.youtube.com/watch?v=b9zh0SFbkqM"
+                },
+                {
+                    "title": "Dissecting GitHub Outage - Multiple Leaders in Zookeeper Cluster",
+                    "url": "https://www.youtube.com/watch?v=bycFzB6yrK0"
+                },
+                {
+                    "title": "How an Edge Case Caused the GitHub Downtime",
+                    "url": "https://www.youtube.com/watch?v=iqapVyfoFqc"
+                },
+                {
+                    "title": "Why caching would not speed up Mark-and-Sweep GC?",
+                    "url": "https://www.youtube.com/watch?v=LkympMbgmCo"
+                },
+                {
+                    "title": "How an ALTER TABLE Caused a Massive GitHub Outage",
+                    "url": "https://www.youtube.com/watch?v=82Xywy74kfE"
+                },
+                {
+                    "title": "Series Introduction and Announcement | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=NXbOVLpage0"
+                },
+                {
+                    "title": "Why and How Is Single-Threaded Redis Fast and Can Handle Multiple Connections? | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=h30k7YixrMo"
+                },
+                {
+                    "title": "Writing a Simple TCP Echo Server - Step 0 to Build Your Own Redis | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=zlxdX9f4l50"
+                },
+                {
+                    "title": "Wire Protocols, Why Are They Needed, and Redis' Wire Protocol - RESP | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=PtJl3jtmqgE"
+                },
+                {
+                    "title": "Implementing Redis' Wire Protocol - RESP | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=wnHZHGc8tW8"
+                },
+                {
+                    "title": "Implementing Redis' PING Command | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=70UJ1QTQj5Y"
+                },
+                {
+                    "title": "Event Loops Internals And How Redis Handles Multiple Connects on a Single Thread | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=U2IFZ_hw91o"
+                },
+                {
+                    "title": "Implementing Event Loops | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=SMmLVHgE4pM"
+                },
+                {
+                    "title": "Implementing GET, SET, and TTL Commands in Redis | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=1rnEpo56LFk"
+                },
+                {
+                    "title": "Implementing DEL, EXPIRE, and Cleanup in Redis | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=yGdk0hmvkgo"
+                },
+                {
+                    "title": "Key Eviction Strategies in Redis and Implementing Simple First Eviction | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=EkaTFT9ox-I"
+                },
+                {
+                    "title": "Implementing Command Pipelining | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=2q7RuEb9z-M"
+                },
+                {
+                    "title": "Implementing AOF Persistence | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=5SnkVoatBpA"
+                },
+                {
+                    "title": "Object, Encodings, and Implementing INCR | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=Dl9h6sQAFfk"
+                },
+                {
+                    "title": "Implementing INFO and allkeys-random Eviction | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=jmN3VRsUmRs"
+                },
+                {
+                    "title": "The Approximated LRU Algorithm | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=0kOCyjFKKL4"
+                },
+                {
+                    "title": "Implementing the Approximated LRU Algorithm | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=FvGGkzcKKFA"
+                },
+                {
+                    "title": "How Redis Caps Its Memory Usage | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=xNfoeZuK3Mc"
+                },
+                {
+                    "title": "How and Why Redis Overrides Malloc | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=RCNMYljRmY4"
+                },
+                {
+                    "title": "How Databases Implement Graceful Shutdown using Signal Handling | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=l-Bf0Ssf2GE"
+                },
+                {
+                    "title": "How Redis Implements Transactions and How We Implement It | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=USZAZeuP8Iw"
+                },
+                {
+                    "title": "How Redis Internally Implements Memory Efficient Lists - Ziplist and Quicklist | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=2EknAibFgu8"
+                },
+                {
+                    "title": "How Redis Internally Implements Memory Efficient Sets - Intset | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=OPxs_D47yCI"
+                },
+                {
+                    "title": "How Redis implements LFU using Morris Counter",
+                    "url": "https://www.youtube.com/watch?v=q6Q2ou0hCws"
+                },
+                {
+                    "title": "How Redis powers Geospatial Queries using GeoHash Algorithm | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=rAi1h7dltCk"
+                },
+                {
+                    "title": "How Redis Implements Strings | Redis Internals",
+                    "url": "https://www.youtube.com/watch?v=Bx7ykrizjCY"
                 }
             ],
             "advanced": [
@@ -583,10 +875,6 @@
                     "url": "https://www.youtube.com/watch?v=XbV1LoVsbME"
                 },
                 {
-                    "title": "The Architecture of Yelp's in-house Search Engine - nrtSearch",
-                    "url": "https://www.youtube.com/watch?v=i8MweKYoG1U"
-                },
-                {
                     "title": "How Rockset executes query and scales the query compute horizontally on demand | Rockset Internals",
                     "url": "https://www.youtube.com/watch?v=HWeTVy5i9vE"
                 },
@@ -623,10 +911,6 @@
                     "url": "https://www.youtube.com/watch?v=iHHqnyThrqE"
                 },
                 {
-                    "title": "How Slack efficiently classifies emails at scale with an eventually consistent system",
-                    "url": "https://www.youtube.com/watch?v=BwxU9EnCFXA"
-                },
-                {
                     "title": "How PostgreSQL generates all possible query execution plans before choosing the best one.",
                     "url": "https://www.youtube.com/watch?v=pj7Fxr8cUJI"
                 },
@@ -645,6 +929,22 @@
                 {
                     "title": "How DNS really works and how it scales infinitely?",
                     "url": "https://www.youtube.com/watch?v=g_gKI2HCElk"
+                },
+                {
+                    "title": "Quantization Fundamentals - How LLMs are Served Efficiently with Low Memory - Inference Engineering",
+                    "url": "https://www.youtube.com/watch?v=FZQpsLfr4xY"
+                },
+                {
+                    "title": "When DB consumes more memory than it should, malloc might be the problem",
+                    "url": "https://www.youtube.com/watch?v=9TkOg-J2Dnc"
+                },
+                {
+                    "title": "How MySQL's Midpoint Insertion Strategy Prevents Cache Pollution",
+                    "url": "https://www.youtube.com/watch?v=DMfr9jMLnz0"
+                },
+                {
+                    "title": "The compression algorithm that powers all Time-series Databases",
+                    "url": "https://www.youtube.com/watch?v=J7VJtuRCkuI"
                 }
             ]
         },

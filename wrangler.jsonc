@@ -1,0 +1,10 @@
+{
+    // Serves the `next build` static export (./out) as Worker Static Assets.
+    // Build command: `next build` — deploy command: `npx wrangler versions upload`
+    "name": "arpit-bhayani-system-design",
+    "compatibility_date": "2026-09-12",
+    "assets": {
+        "directory": "./out",
+        "not_found_handling": "404-page"
+    }
+}

@@ -20,6 +20,21 @@ export interface LinksData {
     motivation_and_soft_advice: Video[];
 }
 
+export interface Series {
+    slug: string;
+    title: string;
+    tagline: string;
+    videoIds: string[]; // Ordered episode list (YouTube IDs)
+}
+
+export interface SeriesMembership {
+    series: Series;
+    part: number; // 1-based episode number
+    total: number;
+    prev?: Video;
+    next?: Video;
+}
+
 // Keeping Note and Progress as they are independent of static data structure
 export interface Note {
     id: string;
