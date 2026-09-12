@@ -17,7 +17,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Arpit Bhayani Learning Hub",
+  title: {
+    default: "Arpit Bhayani Learning Hub",
+    template: "%s | Arpit Bhayani Learning Hub",
+  },
   description: "Unofficial Learning Dashboard",
 };
 
