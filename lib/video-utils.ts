@@ -4,7 +4,22 @@ import rawLinks from "@/data/links.json";
 const linksData = (rawLinks as unknown) as LinksData[];
 
 export const getYouTubeId = (url: string): string | undefined => {
-    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+    // Robust parse via URL API: handles watch?v=, youtu.be/, /shorts/, /embed/,
+    // /live/, /v/ plus extra params (?t=, ?si=, &list=, ...).
+    try {
+        const parsed = new URL(url);
+        const host = parsed.hostname.replace(/^(www\.|m\.)/, "");
+        const v = parsed.searchParams.get("v");
+        if (v && /^[A-Za-z0-9_-]{11}$/.test(v)) return v;
+        const pathMatch =
+            parsed.pathname.match(/^\/(?:shorts|embed|live|v)\/([^/?#&]+)/) ||
+            (host === "youtu.be" ? parsed.pathname.match(/^\/([^/?#&]+)/) : null);
+        const id = pathMatch?.[1];
+        if (id && /^[A-Za-z0-9_-]{11}$/.test(id)) return id;
+    } catch {
+        // Not a valid absolute URL — fall through to regex below.
+    }
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|shorts\/|live\/|watch\?v=|&v=)([^#&?]*).*/;
     const match = url.match(regExp);
     return (match && match[2].length === 11) ? match[2] : undefined;
 };
