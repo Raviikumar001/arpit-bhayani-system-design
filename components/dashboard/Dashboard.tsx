@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { useStore } from "@/store/useStore";
-import { getAllVideos, getVideoById, getVideosByCategory } from "@/lib/video-utils";
+import { getAllVideos, getVideoById, getVideosByCategory, getAllSeries } from "@/lib/video-utils";
 import { Video } from "@/types";
 import { HeroSection } from "@/components/dashboard/HeroSection";
 import { VideoCarousel } from "@/components/video/VideoCarousel";
+import { SeriesCard } from "@/components/series/SeriesCard";
 
 function shuffled<T>(arr: T[]): T[] {
     const copy = [...arr];
@@ -70,6 +72,26 @@ export function Dashboard() {
                     videos={recommendedVideos}
                 />
 
+                <section className="py-6 space-y-4 px-2">
+                    <div className="flex items-center justify-between px-6 md:px-12">
+                        <h2 className="text-xl md:text-2xl font-bold text-white">
+                            Learning Series
+                        </h2>
+                        <Link href="/series" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">
+                            View All
+                        </Link>
+                    </div>
+                    <div
+                        className="flex gap-4 overflow-x-auto px-6 md:px-12 pb-4 scrollbar-hide snap-x"
+                        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                    >
+                        {getAllSeries().map((series) => (
+                            <div key={series.slug} className="flex-none w-[280px] md:w-[320px] snap-start">
+                                <SeriesCard series={series} />
+                            </div>
+                        ))}
+                    </div>
+                </section>
 
                 <VideoCarousel
                     title="Motivation & Advice"

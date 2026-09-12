@@ -1,7 +1,9 @@
-import { Video, LinksData, DifficultyLevel, ContentType } from "@/types";
+import { Video, LinksData, DifficultyLevel, ContentType, Series, SeriesMembership } from "@/types";
 import rawLinks from "@/data/links.json";
+import rawSeries from "@/data/series.json";
 
 const linksData = (rawLinks as unknown) as LinksData[];
+const seriesData = (rawSeries as unknown) as Series[];
 
 export const getYouTubeId = (url: string): string | undefined => {
     // Robust parse via URL API: handles watch?v=, youtu.be/, /shorts/, /embed/,
@@ -97,8 +99,7 @@ export const searchVideos = (query: string): Video[] => {
     });
 };
 
-export const getCommonTags = (limit: number = 10): string[] => {
-    const allVideos = getAllVideos();
+export const getCommonTags = (limit: number = 10): string[] => {    const allVideos = getAllVideos();
     const wordCounts: Record<string, number> = {};
     const stopWords = new Set([
         // Common Prepositions & Articles
@@ -148,4 +149,45 @@ export const getCommonTags = (limit: number = 10): string[] => {
         .sort(([, a], [, b]) => b - a)
         .slice(0, limit)
         .map(([word]) => word.charAt(0).toUpperCase() + word.slice(1)); // Capitalize
+};
+
+// ---------------------------------------------------------------------------
+// Series (cross-cutting ordered groups like Redis Internals; independent of level)
+// ---------------------------------------------------------------------------
+
+export const getAllSeries = (): Series[] => seriesData;
+
+export const getSeriesBySlug = (slug: string): Series | undefined =>
+    seriesData.find((s) => s.slug === slug);
+
+export const getSeriesVideos = (slug: string): Video[] => {
+    const series = getSeriesBySlug(slug);
+    if (!series) return [];
+    return series.videoIds
+        .map((id) => getVideoById(id))
+        .filter((v): v is Video => Boolean(v));
+};
+
+const videoToSeriesSlug = new Map<string, string>();
+seriesData.forEach((s) =>
+    s.videoIds.forEach((id) => {
+        if (!videoToSeriesSlug.has(id)) videoToSeriesSlug.set(id, s.slug);
+    })
+);
+
+export const getSeriesForVideo = (videoId: string): SeriesMembership | undefined => {
+    const slug = videoToSeriesSlug.get(videoId);
+    if (!slug) return undefined;
+    const series = getSeriesBySlug(slug);
+    if (!series) return undefined;
+    const index = series.videoIds.indexOf(videoId);
+    if (index === -1) return undefined;
+    const videos = getSeriesVideos(slug);
+    return {
+        series,
+        part: index + 1,
+        total: series.videoIds.length,
+        prev: index > 0 ? videos[index - 1] : undefined,
+        next: index < videos.length - 1 ? videos[index + 1] : undefined,
+    };
 };

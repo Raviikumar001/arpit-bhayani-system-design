@@ -5,7 +5,8 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { cn } from "@/lib/utils";
-import { BookOpen, Trophy, LayoutDashboard, Info, ChevronLeft, ChevronRight, Search, PieChart } from "lucide-react";
+import { getAllSeries } from "@/lib/video-utils";
+import { BookOpen, Trophy, LayoutDashboard, Info, ChevronLeft, ChevronRight, Search, PieChart, ListVideo } from "lucide-react";
 
 const navItems = [
     {
@@ -50,6 +51,19 @@ export function Sidebar() {
     const pathname = usePathname();
     const [isCollapsed, setIsCollapsed] = useState(false);
 
+    const seriesSection = {
+        title: "Series",
+        items: [
+            ...getAllSeries().map((s) => ({
+                name: `${s.title} (${s.videoIds.length})`,
+                href: `/series/${s.slug}`,
+            })),
+        ],
+        icon: ListVideo,
+    };
+    // Insert Series right after Technical (index 2)
+    const sections = [navItems[0], navItems[1], navItems[2], seriesSection, ...navItems.slice(3)];
+
     return (
         <aside
             className={cn(
@@ -75,7 +89,7 @@ export function Sidebar() {
             </div>
 
             <div className="space-y-6 flex-1 overflow-y-auto scrollbar-hide">
-                {navItems.map((section) => (
+                {sections.map((section) => (
                     <div key={section.title}>
                         {section.items ? (
                             <>
